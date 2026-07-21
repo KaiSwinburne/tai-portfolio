@@ -9,7 +9,7 @@ export default defineConfig({
   base: "/tai-portfolio",
   resolve: {
     alias:{
-      "@": path.resolve(__dirname, "./src"),
+      "@": path.resolve(__dirname, "./src"), //Use the "@" symbol to represent root folder
     },
   },
 })

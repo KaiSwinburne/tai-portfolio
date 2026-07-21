@@ -7,6 +7,13 @@
   --color-foreground: #ffffff;
   --font-space-grotesk: 'Space Grotesk', 'sans-serif';
 
+  --color-highlight: #36ADA3;
+  --color-primary: #232F72;
+  --color-secondary: #2F578A;
+
+  --color-nav-items-blurred: #cccccc;
+  --color-surface: #213282;
+
   --radius: 10px;
 }
 
@@ -19,4 +26,8 @@
     background-color: var(--color-background);
     color: var(--color-foreground);
   }
+}
+
+@layer components{
+  
 }
