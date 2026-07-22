@@ -10,7 +10,7 @@ const navLinks = [
 export const Navbar = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpened] = useState(false);
 
-    return <header className="fixed top-0 left-0 right-0 bg-transparent py-5">
+    return <header className="fixed top-0 left-0 right-0 z-50 bg-background pt-5 md:py-5">
         <nav className="container mx-auto px-6 flex items-center justify-between">
             <a href="#" className="text-4xl font-bold tracking-tight font-space-grotesk cur">THANH TAI TRAN</a>
 
@@ -28,7 +28,7 @@ export const Navbar = () => {
             </div>
             {/*Contact Button */}
             <div className="hidden md:block">
-                <Button className="text-2xl bg-highlight hover:bg-highlight/90 shadow-lg shadow-highlight/25 hover:cursor-pointer" px="px-4" py="py-2">Contact Me</Button>
+                <Button className="text-2xl bg-highlight hover:bg-highlight/90 shadow-lg shadow-highlight/25 rounded-full" px="px-4" py="py-2">Contact Me</Button>
             </div>
 
             {/*Mobile Hamburger logo*/}
@@ -52,7 +52,7 @@ export const Navbar = () => {
                             {link.label}
                         </a>
                     ))}
-                    <Button className="text-xl bg-highlight hover:bg-highlight/90 shadow-lg shadow-highlight/25 hover:cursor-pointer" px="px-4" py="py-2">Contact Me</Button>
+                    <Button className="text-xl bg-highlight hover:bg-highlight/90 shadow-lg shadow-highlight/25 rounded-full" px="px-4" py="py-2">Contact Me</Button>
                 </div>    
             </div>
         )}

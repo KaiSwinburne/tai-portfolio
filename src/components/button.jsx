@@ -1,5 +1,5 @@
 export const Button = ({className, px="", py="", children}) => {
-    const baseClasses = "relative overflow-hidden rounded-full font-space-grotesk"
+    const baseClasses = "relative overflow-hidden font-space-grotesk transition-all duration-300 hover: cursor-pointer"
 
     const classes = `${baseClasses} ${className} ${px} ${py}`
     return (
