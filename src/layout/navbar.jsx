@@ -12,7 +12,7 @@ export const Navbar = () => {
 
     return <header className="fixed top-0 left-0 right-0 z-50 bg-background pt-5 md:py-5">
         <nav className="container mx-auto px-6 flex items-center justify-between">
-            <a href="#" className="text-4xl font-bold tracking-tight font-space-grotesk cur">THANH TAI TRAN</a>
+            <a href="/" className="text-4xl font-bold tracking-tight font-space-grotesk cur">THANH TAI TRAN</a>
 
             {/*Desktop View Nav Items*/}
             <div className="hidden md:flex items-center gap-1">
