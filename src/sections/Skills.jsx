@@ -33,7 +33,7 @@ export const Skills = () => {
         setActiveItemIndex((current) => (current === carouselData.length - 1 ? 0 : current + 1));
     };
 
-    return <section id="skills" className="scroll-mt-28">
+    return <section id="skills" className="scroll-mt-28 py-10">
         {/*Heading */}
         <div className="flex flex-col justify-center items-center py-4">
             <h1 className="font-bold text-5xl font-space-grotesk">Skills</h1>

@@ -66,4 +66,10 @@
   .animation-fade-out{
     animation: fade-out 0.4s ease-out both;
   }
+
+  .timeline-glow{
+    box-shadow: 0 0 40px,
+    color-mix(in srgb, var(--color-highlight) 35%, transparent),
+    0 0 80px color-mix(in srgb, var(--color-highlight) 25%, transparent);
+  }
 }
