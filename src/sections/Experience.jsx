@@ -18,10 +18,10 @@ const experiences = [
 ]
 
 export const Experience = () => {
-    return <section id="experience" className="py-20 relative overflow-hidden">
+    return <section id="experience" className="py-8 relative overflow-hidden">
         <div className="container mx-auto px-6 relative z-10">
             {/*Section Header */}
-            <div className="max-w-3xl mb-16">
+            <div className="max-w-3xl mb-8">
                 <h1 className="font-bold text-5xl font-space-grotesk">
                     Work Experience
                 </h1>

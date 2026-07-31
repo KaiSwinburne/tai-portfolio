@@ -1,7 +1,7 @@
 import IntroImage from "../assets/rm378-02.jpg"
 import DALogo from "../assets/DA-logo.png"
 import { Button } from "../components/button"
-import {ChevronRight} from "lucide-react"
+import {ChevronRight,Download} from "lucide-react"
 
 export const Hero = () => {
     return <section className="relative flex min-h-screen">
@@ -35,7 +35,7 @@ export const Hero = () => {
                         <Button className="text-xl bg-highlight hover:bg-highlight/90 shadow-lg shadow-highlight/25 rounded-[8px]" 
                                            px="px-4" py="py-2">Explore my work <ChevronRight/></Button>
                         <Button className="text-xl bg-transparent border-2 border-highlight text-highlight rounded-[8px] hover:bg-highlight hover:text-foreground " 
-                                           px="px-4" py="py-2">View my CV</Button>
+                                           px="px-4" py="py-2"><Download/> View my CV</Button>
                     </div>
                 </div>
 
