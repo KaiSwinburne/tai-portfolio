@@ -28,7 +28,7 @@ export const Navbar = () => {
             </div>
             {/*Contact Button */}
             <div className="hidden md:block">
-                <Button className="text-2xl bg-highlight hover:bg-highlight/90 shadow-lg shadow-highlight/25 rounded-full" px="px-4" py="py-2">Contact Me</Button>
+                <a href="#contact" className="text-2xl bg-highlight hover:bg-highlight/90 shadow-lg shadow-highlight/25 rounded-full inline-block px-4 py-2 text-center">Contact Me</a>
             </div>
 
             {/*Mobile Hamburger logo*/}
@@ -52,7 +52,7 @@ export const Navbar = () => {
                             {link.label}
                         </a>
                     ))}
-                    <Button className="text-xl bg-highlight hover:bg-highlight/90 shadow-lg shadow-highlight/25 rounded-full" px="px-4" py="py-2">Contact Me</Button>
+                    <a href="#contact" className="text-xl bg-highlight hover:bg-highlight/90 shadow-lg shadow-highlight/25 rounded-full inline-block px-4 py-2 text-center">Contact Me</a>
                 </div>    
             </div>
         )}
