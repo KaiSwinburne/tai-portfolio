@@ -1,10 +1,11 @@
 import { Button } from "@/components/button"
 import { Menu, X } from "lucide-react"
 import { useState } from "react"
+import { HashLink as Link} from "react-router-hash-link"
 const navLinks = [
-    {href: "#skills", label: "Skills"},
-    {href: "#experience", label: "Experience"},
-    {href: "#projects", label: "Projects"},
+    {href: "/#skills", label: "Skills"},
+    {href: "/#experience", label: "Experience"},
+    {href: "/#projects", label: "Projects"},
 ]
 
 export const Navbar = () => {
@@ -19,16 +20,16 @@ export const Navbar = () => {
                 <div className="px-2 py-1 flex items-center gap-1">
                     {/* Map the links label in the navLinks object into <a> */}
                     {navLinks.map((link, index) => (
-                        <a href={link.href} key={index} className="px-4 py-2 text-2xl font-space-grotesk 
+                        <Link to={link.href} key={index} className="px-4 py-2 text-2xl font-space-grotesk 
                                                         text-foreground hover:text-nav-items-blurred">
                             {link.label}
-                        </a>
+                        </Link>
                     ))}                   
                 </div>
             </div>
             {/*Contact Button */}
             <div className="hidden md:block">
-                <a href="#contact" className="text-2xl bg-highlight hover:bg-highlight/90 shadow-lg shadow-highlight/25 rounded-full inline-block px-4 py-2 text-center">Contact Me</a>
+                <Link to="/#contact" className="text-2xl bg-highlight hover:bg-highlight/90 shadow-lg shadow-highlight/25 rounded-full inline-block px-4 py-2 text-center">Contact Me</Link>
             </div>
 
             {/*Mobile Hamburger logo*/}
@@ -45,14 +46,12 @@ export const Navbar = () => {
             <div className="md:hidden glass animation-fade-in">
                 <div className="container mx-auto px-6 py-6 flex flex-col gap-4">
                     {navLinks.map((link, index) => (
-                        <a href={link.href} 
-                            key={index} 
-                            className="text-xl font-space-grotesk py-2
-                                    text-foreground hover:text-nav-items-blurred">
+                        <Link to={link.href} key={index} className="text-xl font-space-grotesk py-2
+                                                    text-foreground hover:text-nav-items-blurred">
                             {link.label}
-                        </a>
+                        </Link>
                     ))}
-                    <a href="#contact" className="text-xl bg-highlight hover:bg-highlight/90 shadow-lg shadow-highlight/25 rounded-full inline-block px-4 py-2 text-center">Contact Me</a>
+                    <Link to="/#contact" className="text-2xl bg-highlight hover:bg-highlight/90 shadow-lg shadow-highlight/25 rounded-full inline-block px-4 py-2 text-center">Contact Me</Link>
                 </div>    
             </div>
         )}

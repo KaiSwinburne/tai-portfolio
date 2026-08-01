@@ -5,6 +5,7 @@ import SupplyIMG from "@/assets/supplydrop.jpg"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import {ArrowUpRight} from "lucide-react"
+import { Link } from "react-router-dom";
 
 const projects = [
     {
@@ -13,7 +14,7 @@ const projects = [
         tags: ["JavaScript","KNIME","Python"],
         link: "https://kaiswinburne.github.io/COS30045-Data-Visualisation-Project/",
         github: "https://github.com/KaiSwinburne/COS30045-Data-Visualisation-Project",
-        more_info: "",
+        more_info: "/mobile-data-project",
         image: EnforcementProjectIMG
     },
     {
@@ -89,15 +90,15 @@ export const Projects = () => {
                                         Live Demo
                                     </a>
                                 : null}
-                                
-                                <a
-                                    href={project.more_info}
-                                    target="_blank"
-                                    rel="noreferrer"
+
+                                <Link 
+                                    to={project.more_info}
                                     className="px-4 py-2 rounded-lg border border-transparent bg-highlight text-white font-medium text-sm hover:bg-highlight/10 hover:border-highlight/40 transition font-space-grotesk inline-flex items-center gap-2"
                                 >
-                                    <ArrowUpRight className="w-4 h-4"/> View Project
-                                </a>
+                                    <ArrowUpRight className="w-4 h-4"/> 
+                                    View Project
+                                </Link>
+
                                 {project.github ? 
                                     <a
                                     href={project.github}

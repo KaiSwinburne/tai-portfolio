@@ -1,24 +1,15 @@
-import { Hero } from "@/sections/Hero";
-import { Skills } from "@/sections/Skills";
-import { Experience } from "@/sections/Experience";
-import { Projects } from "@/sections/Projects";
-import { Contact } from "@/sections/Contact";
-import { Navbar } from "@/layout/navbar";
-import { Footer } from "@/layout/footer";
+import { Home } from "@/pages/home";
+import { MobileDataProject } from "@/pages/MobileDataProject";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className="min-h-screen overflow-x-hidden">
-      <Navbar />
-      <main>
-        <Hero />
-        <Skills />
-        <Experience />
-        <Projects />
-        <Contact />
-      </main>
-      <Footer />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/mobile-data-project" element={<MobileDataProject/>}/>
+      </Routes>
+    </Router>
   );
 }
 
