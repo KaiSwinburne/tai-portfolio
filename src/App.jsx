@@ -1,6 +1,7 @@
 import { Home } from "@/pages/home";
 import { MobileDataProject } from "@/pages/MobileDataProject";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import "@fontsource/roboto";
 
 function App() {
   return (
