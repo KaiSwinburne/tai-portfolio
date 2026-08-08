@@ -1,11 +1,18 @@
-import IMG1 from "@/assets/enfrc_img_1.jpg";
-import IMG2 from "@/assets/enfrc_img_2.jpg";
-import IMG3 from "@/assets/enfrc_img_3.jpg";
-import DESCIMG1 from "@/assets/enfrc_desc_img_1.jpg";
-import DESCIMG2 from "@/assets/enfrc_desc_img_2.jpg";
-import DESCIMG3 from "@/assets/enfrc_desc_img_3.jpg";
-import DESCIMG4 from "@/assets/enfrc_desc_img_4.jpg";
-import DESCIMG5 from "@/assets/enfrc_desc_img_5.jpg";
+import IMG1 from "@/assets/ad_img_1.jpg";
+import IMG2 from "@/assets/ad_img_2.jpg";
+import IMG3 from "@/assets/ad_img_3.jpg";
+import IMG4 from "@/assets/ad_img_4.jpg";
+import IMG5 from "@/assets/ad_img_5.jpg";
+import IMG6 from "@/assets/ad_img_6.jpg";
+import IMG7 from "@/assets/ad_img_7.jpg";
+import IMG8 from "@/assets/ad_img_8.jpg";
+import IMGPOS from "@/assets/ad_img_pos.jpg";
+
+import DESCIMG1 from "@/assets/ad_desc_img_1.jpg";
+import DESCIMG2 from "@/assets/ad_desc_img_2.jpg";
+import DESCIMG3 from "@/assets/ad_desc_img_3.jpg";
+import DESCIMG4 from "@/assets/ad_desc_img_4.jpg";
+import DESCIMG5 from "@/assets/ad_desc_img_5.jpg";
 
 import { Navbar } from "@/layout/navbar";
 import { Footer } from "@/layout/footer";
@@ -13,71 +20,96 @@ import { Carousel } from "@/components/coursel";
 import { useEffect } from "react";
 import { HashLink as Link} from "react-router-hash-link";
 import { ImageModal } from "@/components/image-modal";
-import {ArrowLeft, UserCog, CalendarCheck, Goal, CircleUserRound} from "lucide-react";
+import {ArrowLeft, UserCog, CalendarCheck, Goal, CircleUserRound, Eye} from "lucide-react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
-const projectTags = ["JavaScript","KNIME","Python"];
-const liveDemoLink = "https://kaiswinburne.github.io/COS30045-Data-Visualisation-Project";
-const gitHubLink = "https://github.com/KaiSwinburne/COS30045-Data-Visualisation-Project";
+const projectTags = ["Python","scikit-learn","PyQT"];
 
 const imgDict = [
     {
         image: IMG1,
-        subtitle: "Line chart visualisation"
+        subtitle: "Real-time XAI Explanation graphs UI"
     },
     {
         image: IMG2,
-        subtitle: "Bar chart visualisation"
+        subtitle: "Real-time human understandable explanation UI"
     },
     {
         image: IMG3,
-        subtitle: "Heatmap visualisation"
-    }
+        subtitle: "Anomaly Detection results in real-time"
+    },
+    {
+        image: IMG4,
+        subtitle: "Offline Mode Anomaly Detection Dashboard Report"
+    },
+    {
+        image: IMG5,
+        subtitle: "Satellite Dataset Generation UI"
+    },
+    {
+        image: IMG6,
+        subtitle: "Anomaly Detection Online Mode UI"
+    },
+    {
+        image: IMG7,
+        subtitle: "Anomaly Detection Offline Mode UI"
+    },
+    {
+        image: IMG8,
+        subtitle: "Basilisk simulation overview"
+    },
 ]
 
 const developmentJournal = [
     {
         heading: "1. Context",
-        description: "The raw data was retrieved from Australian Government Bureau of Infrastructure and Transport Research Economics (BITRE) website from this link https://www.bitre.gov.au/publications/2024/road-safety-enforcement-data. This project focuses primarily on mobile phone use while driving offences in all Australian jurisdictions in 2024",
+        description: "This project is the final-year Capstone project, where I worked in a team of 5 people developing the integrated software throughout two semesters using the Agile development framework.\n\nIn semester one, I worked on developing & optimizing the anomaly detection and XAI models, while in semester two I helped finalize the integration process and developed the UI for the program.",
         image: DESCIMG1,
-        alt: "Raw dataset website"
+        alt: "Project development timeline"
     },
     {
-        heading: "2. Data Cleaning & Transformation",
-        description: `I used KNIME as the main tool for cleaning the raw data, such as handling missing values, filtering data of mobile phone use incidents and removing duplications. I also handled data transformation with techniques such as: Categorical Standardisation, Feature Extraction, Data Separation and Aggregation.\n\nThis resulted in consistent aggregated data for mobile phone fines in all jurisidictions from 2008-2023.`,
+        heading: "2. Data Exploration",
+        description: `Using Python libraries such as Panda, NumPy, etc. I performed basic exploratory data analysis on the provided dataset using various techniques as Data Profiling, Box Plots, Statistical Summary, etc. The main goal was to understand the structure of the telemetry channel data that contains contextual and point anomalies to build the ML model later on.`,
         image: DESCIMG2,
-        alt: "KNIME workflow"
+        alt: "Contextual anomalies visualization during exploration"
     },
     {
-        heading: "3. Visualisation Prototypes",
-        description: `To test the visualisations that provide the best insights into the mobile phone fines trend. Excel was used as the main prototyping tool, taking transformed data and make visualisations and gather feedback for further improvements.`,
+        heading: "3. Model Optimization",
+        description: `To improve the ProtoAD model performance on multivariate, non-linear data anomaly detection, I employed several techniques, such as PCA dimensionality reduction for reducing overlapped data, or use Mahalanobis Distance as the main scoring metric for the anomaly detection model. These solutions improved detection performance and efficiency greatly to the model.`,
         image: DESCIMG3,
-        alt: "Line chart prototype"
+        alt: "PCA Dimensionality Reduction Implementation"
     },
     {
-        heading: "4. Programming Interactive Visualisations",
-        description: `Visualisations were programmed with JavaScript using D3 library. I created the Line chart and the Heatmap with custom aggregated data in JavaScript. Furthermore, interactions such as tooltip, years and jurisdictions selectors were created to allow users freedom to explore the data better.`,
+        heading: "4. Integration with Basilisk simulation",
+        description: `At the start of Semester 2, I was in charge of integrating the Explainable AI feature into Basilisk's live simulation datastream, which would allow real-time explanation for detected anomalies.\n\nThis was achieved by initializing the XAI parameters only when the anomaly is detected during simulation runtime and take the reconstructed data (generated from anomaly prediction process) to run the explainability process on it.`,
         image: DESCIMG4,
-        alt: "Code Snippet of Line Chart"
+        alt: "Code snippet of running XAI process when detecting anomalies"
     },
     {
-        heading: "5. Deployment",
-        description: `GitHub was used as the main Version Control tool, as well as the site deployment. All the data was saved as CSV files and saved on GitHub.`,
+        heading: "5. UI Development",
+        description: `The UI was developed using PyQT, which enables the program to show a dashboard report of the detected anomalies in both real-time and offline. Furthermore, users can configure their satellite data and detection model parameters.`,
+        image: IMG4,
+        alt: "The dashboard report of anomaly detection result"
+    },
+    {
+        heading: "6. Documentation and Manuals",
+        description: `At the end of the project, the team ensured that development process was documented carefully, as well as a user manual was made, equipping first-time users with adequate knowledge to use program.`,
         image: DESCIMG5,
-        alt: "Project GitHub page"
+        alt: "User Manual"
     },
 ];
 
-export const MobileDataProject = () => {
+export const AnomalyDetectionProject = () => {
     //Make sure the page starts at the top
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
-    
+
     const projectLink = "/#projects"
 
     return(
+
         <div className="min-h-svh overflow-x-hidden">
             <Navbar />
             <main className="pt-24 md:pt-26">
@@ -96,8 +128,8 @@ export const MobileDataProject = () => {
                         <div className="py-8 grid lg:grid-cols-[3fr_1fr] gap-5 lg:gap-20 w-full ">
                             {/*Heading - Left Column*/}
                             <div className="flex flex-col justify-center gap-4">
-                                <h1 className="font-bold text-4xl md:text-5xl font-space-grotesk">Explore data of enforcement on mobile phone use while driving across Australia jurisdictions</h1>
-                                <p className="font-space-grotesk text-[18px] md:text-xl">This project is an interactive dashboard provides insights into mobile phone fines while driving across Australian jurisdictions.</p>
+                                <h1 className="font-bold text-4xl md:text-5xl font-space-grotesk">Anomaly detection and explainable AI in the context of autonomous satellite system</h1>
+                                <p className="font-space-grotesk text-[18px] md:text-xl">A software prototype that detects anomalous data produced in Basilisk simulation platform with explanation using SHAP XAI.</p>
                                 
                                 <div className="flex flex-wrap gap-2">
                                     {projectTags.map((tag) => (
@@ -117,29 +149,15 @@ export const MobileDataProject = () => {
 
                                 <div>
                                     <h2 className="font-space-grotesk text-2xl font-bold flex flex-row gap-2 items-center"> <CalendarCheck/> Completion Date</h2>
-                                    <p className="font-space-grotesk">June 2025</p>
+                                    <p className="font-space-grotesk">November 2025</p>
                                 </div>
                             </div>
                         </div>
 
                         {/*Redirection Buttons */}
-                        <div className="flex flex-wrap gap-3 mb-3">
-                            <a
-                                href={liveDemoLink}
-                                target="_blank"
-                                rel="noreferrer"
-                                className="px-4 py-2 rounded-lg bg-white text-black font-medium text-xl hover:bg-white/70 transition font-space-grotesk"
-                            >
-                                Live Demo
-                            </a>
-                            <a
-                            href={gitHubLink}
-                            target="_blank"
-                            rel="noreferrer"
-                            className="px-4 py-2 rounded-lg border border-white/20 font-medium text-xl hover:bg-highlight/10 hover:border-highlight/40 transition font-space-grotesk"
-                            >
-                                <FontAwesomeIcon icon={faGithub} size="lg"/> GitHub
-                            </a>
+                        <div className="flex flex-col gap-3 mb-3">
+                            <ImageModal text_preview={true} alt="View project poster" img={IMGPOS} default_style={true}/>
+                            <p className="font-space-grotesk text-xl italic">There are no Live Demo or GitHub repository links due to the clients' requests to leave the project private.</p>
                         </div>
 
                         {/*Goal & Roles*/}
@@ -148,8 +166,8 @@ export const MobileDataProject = () => {
                             <div className="glass p-6 rounded-2xl border-2 border-highlight/40 hover:border-highlight/60 transition-all duration-500">
                                 <h2 className="font-space-grotesk text-2xl lg:text-3xl font-bold flex flex-row items-center gap-2 "> <Goal size={30}/> Goal</h2>
                                 <p className="font-space-grotesk"> 
-                                    The main goal of this project is to provide insights into mobile phone fines while driving across Australian jurisdictions.
-                                    The dashboard must give an overview on mobile phone fines trend, demographic and geographic hotspots.
+                                    The main goal is to deliver an integrated software prototype that simulates anomalous satellite metadata on the Basilisk platform, performs real-time anomaly detection using the ProtoAD reconstruction-based model, and visualizes results on an interactive dashboard with SHAP-driven explanations. 
+                                    The system empowers stakeholders to monitor, interpret, and respond to satellite anomalies through live, explainable AI insights.
                                 </p>
                             </div>
 
@@ -157,8 +175,8 @@ export const MobileDataProject = () => {
                             <div className="glass p-6 rounded-2xl border-2 border-highlight/40 hover:border-highlight/60 transition-all duration-500">
                                 <h2 className="font-space-grotesk text-2xl lg:text-3xl font-bold flex flex-row items-center gap-2 "> <CircleUserRound size={30}/> My Role</h2>
                                 <p className="font-space-grotesk"> 
-                                    I was the team lead in a group of two. I am mainly responsible for data cleaning & transformation, as well as programming the 
-                                    interactive visualisation charts in JavaScript using D3. The charts I worked on are the line chart and heatmap, while I assisted with the bar chart.
+                                    As the team lead, I directed both technical development and project coordination. I led satellite data exploration, engineered and optimized the ProtoAD anomaly detection model, supported real-time detection pipeline integration, and designed the PyQt-based user interface. 
+                                    Additionally, I managed stakeholder communication through weekly client meetings, maintained project documentation, and coordinated task delegation to ensure timely delivery across all workstreams.
                                 </p>
                             </div>
                         </div>

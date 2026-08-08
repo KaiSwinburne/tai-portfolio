@@ -51,12 +51,12 @@ export const Skills = () => {
         <div className="md:hidden ">
 
             {/*Mobile View SKills Carousel */}
-            <div className="grid grid-cols-3 place-items-center gap-4">
+            <div className="grid grid-cols-3 place-items-center gap-10">
                 <button
                     onClick={goToPrevious}
                     className="rounded-full bg-primary hover:cursor-pointer hover:bg-highlight hover:border-highlight transition-all duration-300 px-2 py-2"
                 >
-                    <MoveLeft size={40} />
+                    <MoveLeft size={30} />
                 </button>
                 
                 {/* Contents */}
@@ -68,7 +68,7 @@ export const Skills = () => {
                     onClick={goToNext}
                     className="rounded-full bg-primary hover:cursor-pointer hover:bg-highlight hover:border-highlight transition-all duration-300 px-2 py-2"
                 >
-                    <MoveRight size={40}/>
+                    <MoveRight size={30}/>
                 </button>
             </div>
 

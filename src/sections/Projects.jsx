@@ -23,7 +23,7 @@ const projects = [
         tags: ["Python","scikit-learn","PyQT"],
         link: "",
         github: "",
-        more_info: "",
+        more_info: "/anomaly-detection-project",
         image: CapstoneIMG
     },
     {
@@ -32,7 +32,7 @@ const projects = [
         tags: ["C#","Unity"],
         link: "https://kaiswinburne.itch.io/supply-drop",
         github: "",
-        more_info: "",
+        more_info: "/supply-drop-project",
         image: SupplyIMG
     }
 ];
@@ -48,7 +48,7 @@ export const Projects = () => {
             {/*Heading */}
             <div className="flex flex-col justify-center items-center py-4">
                 <h1 className="font-bold text-5xl font-space-grotesk">Featured Projects</h1>
-                <p className="font-space-grotesk text-2xl">Here are my recent and most notable projects</p>
+                <p className="font-space-grotesk  text-xl lg:text-2xl">Here are my recent and most notable projects</p>
             </div>
 
             {/*Project Grid*/}
@@ -73,7 +73,7 @@ export const Projects = () => {
                             {/*Project Tags*/}
                             <div className="flex flex-wrap gap-2 mb-5">
                                 {project.tags.map((tag) => (
-                                    <span key={tag} className="px-3 py-1 rounded-full text-xs border border-highlight/30 bg-white/5 font-space-grotesk">
+                                    <span key={tag} className="px-3 py-1 text-[16px] rounded-full text-xs border border-highlight/30 bg-white/5 font-space-grotesk">
                                         {tag}
                                     </span>
                                 ))}
