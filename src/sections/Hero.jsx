@@ -13,7 +13,7 @@ export const Hero = () => {
              className="absolute inset-0 w-full h-full object-cover opacity-30" />
         </div>
         
-        {/*Content */}
+        {/*Content  */}
         <div className="container mx-auto px-6 py-20 relative z-20 min-h-screen flex items-center">
             <div className="grid lg:grid-cols-2 gap-12 items-center w-full">
                 {/*Left Column - Text*/}
